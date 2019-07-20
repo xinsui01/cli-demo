@@ -334,7 +334,7 @@ const tasks = new Listr([
           {
             title: 'Checking git status',
             task: () =>
-              execa('git', ['status', '--porcelain'],{shell: true}).then(result => {
+              execa('git', ['status', '--porcelain'], { shell: true }).then(result => {
                 if (result !== '') {
                   throw new Error('Unclean working tree. Commit or stash changes first.');
                 }
